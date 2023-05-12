@@ -6,7 +6,7 @@ function handleSubmit(e){
     e.preventDefault();
     // const {email}= req.body
     console.log(email);
-    fetch("http://localhost:5000/forgot-password",{ 
+    fetch("https://forgot-pwd-loginapp.onrender.com:5000/forgot-password",{ 
         method: "POST",
         crossDomain: true,
         headers: {

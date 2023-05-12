@@ -8,7 +8,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
+    fetch("https://forgot-pwd-loginapp.onrender.com:5000/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
