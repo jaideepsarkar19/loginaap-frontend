@@ -3,8 +3,8 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPaginate from 'react-paginate';
 import { useRef } from "react";
-export default function AdminHome({ userData }) {
 
+export default function AdminHome({ userData }) {
   //setting state
   const [data, setData] = useState([]);
   const [limit,setLimit]=useState(5);
@@ -22,7 +22,7 @@ export default function AdminHome({ userData }) {
 
   //fetching all user
   const getAllUser = () => {
-    fetch("https://forgot-pwd-loginapp.onrender.com:5000/getAllUser", {
+    fetch("https://forgot-pwd-loginapp.onrender.com/getAllUser", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -44,7 +44,7 @@ export default function AdminHome({ userData }) {
   //deleting user
   const deleteUser = (id, name) => {
     if (window.confirm(`Are you sure you want to delete ${name}`)) {
-      fetch("https://forgot-pwd-loginapp.onrender.com:5000/deleteUser", {
+      fetch("https://forgot-pwd-loginapp.onrender.com/deleteUser", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -79,7 +79,7 @@ export default function AdminHome({ userData }) {
   }
 
   function getPaginatedUsers(){
-    fetch(`https://forgot-pwd-loginapp.onrender.comt:5000/paginatedUsers?page=${currentPage.current}&limit=${limit}`, {
+    fetch(`https://forgot-pwd-loginapp.onrender.com/paginatedUsers?page=${currentPage.current}&limit=${limit}`, {
       method: "GET",
     })
       .then((res) => res.json())

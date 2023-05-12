@@ -22,7 +22,7 @@ function ImageUpload() {
     },[])
 
     function uploadImage() {
-        fetch("https://forgot-pwd-loginapp.onrender.com:5000/upload-image", {
+        fetch("https://forgot-pwd-loginapp.onrender.com/upload-image", {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -36,7 +36,7 @@ function ImageUpload() {
         }).then((res) => res.json()).then((data) => console.log(data))
     }
     function getImage() {
-        fetch("https://forgot-pwd-loginapp.onrender.com:5000/get-image", {
+        fetch("https://forgot-pwd-loginapp.onrender.com/get-image", {
             method: "GET",
         }).then((res) => res.json()).then((data) => {
             console.log(data)
