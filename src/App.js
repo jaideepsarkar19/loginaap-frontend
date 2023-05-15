@@ -6,7 +6,7 @@ import Reset from "./components/resetpwd";
 import Login from "./components/login_component";
 import SignUp from "./components/signup_component";
 import UserDetails from "./components/userDetails";
-import ImageUpload from "./components/imageUpload.";
+// import ImageUpload from "./components/imageUpload.";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
