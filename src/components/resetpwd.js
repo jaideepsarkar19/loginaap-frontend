@@ -15,7 +15,7 @@ export default function Reset() {
                 "Access-Control-Allow-Origin": "*",
             },
             body: JSON.stringify({
-                email,
+                email
             }),
         })
             .then((res) => res.json())
